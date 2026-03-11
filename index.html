@@ -10,10 +10,12 @@
 /* ── RESET ── */
 *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
 html, body {
-  width:100%; height:100%;
+  width:100%;
+  min-height:100%;
   font-family:'Nunito',sans-serif;
-  background:#0a0a1a; color:#fff;
-  overflow:hidden;
+  background:#0a0a1a;
+  color:#fff;
+  overflow-x:hidden;
   -webkit-tap-highlight-color:transparent;
   touch-action:manipulation;
 }
@@ -125,7 +127,12 @@ html, body {
 .pdot.cur  { background:#fde68a; box-shadow:0 0 7px #fde68a; }
 
 /* ── Canvas ── */
-#cv { width:100%; height:100%; display:block; }
+#cv {
+  width:100%;
+  height:100%;
+  max-height:60vh;
+  display:block;
+}
 
 /* ── Answer row ── */
 .arow {
